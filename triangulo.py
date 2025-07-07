@@ -34,24 +34,6 @@ z = [1150, 1000]
 altura = (1100 * math.sqrt(3)) / 2
 y = [600, 1000 - altura]
 
-''''
-tela = tk.Tk()
-tela.geometry("1200x1000")
-canvas = tk.Canvas(tela, width=1200, height=1000, bg="white")
-canvas.pack()
-nivel = 0
-
-while 1:
-    
-    triangulo_serp(x, y, z, nivel, "#00FFFF")
-    nivel += 1
-
-      # Exibe a janela sem bloquear
-    input("Pressione Enter para fechar a janela e continuar...")
-    canvas.delete("all")  # Fecha a janela antes da próxima iteração
-
-'''''
-
 # Inicialização da tela e canvas
 tela = tk.Tk()
 tela.geometry("1200x1000")
@@ -76,8 +58,6 @@ while 1:
             break
         mensagem = mensagens.get(nivel)
         print(mensagem)
-        
-        
 
     triangulo_serp(x, y, z, nivel, "#00FFFF")
     nivel += 1
@@ -88,5 +68,3 @@ while 1:
 
     # Limpa o canvas para a próxima iteração
     canvas.delete("all")
-
-    
